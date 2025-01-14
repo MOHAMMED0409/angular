@@ -1,0 +1,48 @@
+1. Datatype
+    i. Number:
+        let age: number;
+    ii. String:
+        let fname = 'Mohammed';
+    iii. Boolean:
+        let isValid:boolean;
+            when we use this format in typescript it will through an error because no value is assigned to the variable "isValid".
+        let isValid:boolean=false or true;
+            always define values to variable in typescript.
+    iv. Array:
+        let emplist:string[];
+        let deplist:Array<string>;
+            Two ways to define the array in Typescript.
+    v. enum:
+        enum Color{
+            red,
+            blue,
+            green
+            }
+
+        let g:Color = Color.green
+
+        this Typescript will return a 3 to 4 line of javascript when compiled to redue the line of code in the javascript a type const is used.
+
+        const enum Color{
+            red,
+            blue,
+            green
+        }
+
+        let g:Color = Color.green
+    
+    vi. Tuples:
+        let swapnum: [fnum:number,snum:number];
+        function swapnumbers(num1:number,num2:number):[number,number]{
+            return [num2,num1]
+        }
+
+        swapnum= swapnumbers(10,20);
+
+        console.log(swapnum[0])
+        In Tuples when we try to access the Index out of range it show the error before it is even compiled.
+    
+    vii. any:
+        This will accept any Datatype.
+        note: Don't use it in the codebase.
+         

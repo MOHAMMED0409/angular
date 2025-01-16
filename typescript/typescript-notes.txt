@@ -45,4 +45,39 @@
     vii. any:
         This will accept any Datatype.
         note: Don't use it in the codebase.
-         
+
+2. function
+    i. Types of Function:
+        a. Named Function
+        b. Arrow Function
+        c. Function Expression
+    
+    ii. Optional Parameters:
+        We can pass optional parameters to the functions.
+        for example:
+            function add(num1: number, num2: number, num3?: number): number{
+                return num3? num1+num2+num3 : num1+num2;
+            };
+        Here the "num3?" comes with a question mark which is a optional parameters in the function.
+    
+    iii. Required Parameters:
+         Inside the function defination the values wil be assigned to parameters
+         For Example:
+            functuion add(num1:number , num2=20);
+            In the above function the value for num2 is assigned in function define block.
+
+    iv. Rest  Parameters:
+        For Example:
+            function add2(num1: number, num2 : number, ...num3:number[]) :number {
+                return num1+num2+num3.reduce((a,b)=>a+b,0)
+            };
+            let numbers = [1,2,3,4,5]               
+            console.log(add2(2,3,...numbers));
+            We can pass a array of values to function as above syntax
+
+    v. Generic Function:
+
+3. Classes:
+    Refer the code for better understanding
+    Note: "#" is used in Classes for private variables.
+    

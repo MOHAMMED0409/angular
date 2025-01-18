@@ -1,3 +1,5 @@
+import { User,login } from './interfaces';
+
 // Normal Classes
 class Employee{
     #id! : number;
@@ -28,7 +30,17 @@ class Employee{
     set empid(id: number){
         this.#id = id;
     }
+
+    login(): User {
+        return {
+            name: 'Khashif',
+            age: 25,
+            email: "mohammedkhashif02@gmail.com",
+            id: 1
+        };
+    }
 }
+
 
 // Inheritance
 class Manager extends Employee{

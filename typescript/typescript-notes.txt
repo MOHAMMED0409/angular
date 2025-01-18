@@ -80,4 +80,6 @@
 3. Classes:
     Refer the code for better understanding
     Note: "#" is used in Classes for private variables.
-    
+
+4. Interfaces:
+

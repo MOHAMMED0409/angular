@@ -11,6 +11,7 @@ var __classPrivateFieldGet = (this && this.__classPrivateFieldGet) || function (
     return kind === "m" ? f : kind === "a" ? f.call(receiver) : f ? f.value : state.get(receiver);
 };
 var _Employee_id;
+Object.defineProperty(exports, "__esModule", { value: true });
 // Normal Classes
 class Employee {
     // Constructor
@@ -33,6 +34,14 @@ class Employee {
     }
     set empid(id) {
         __classPrivateFieldSet(this, _Employee_id, id, "f");
+    }
+    login() {
+        return {
+            name: 'Khashif',
+            age: 25,
+            email: "mohammedkhashif02@gmail.com",
+            id: 1
+        };
     }
 }
 _Employee_id = new WeakMap();

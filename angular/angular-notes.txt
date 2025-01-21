@@ -1,0 +1,5 @@
+1. To create a empty project directory
+    ng new <directory_name> --createApplication=false
+
+2. To create a directory with a project 
+    ng new <directory_name>

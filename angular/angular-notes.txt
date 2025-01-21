@@ -3,3 +3,12 @@
 
 2. To create a directory with a project 
     ng new <directory_name>
+
+3. Mono repo:
+    create and maintain multiple app in same repo.
+    Use libraries within the project.
+    Deploy multiple apps/libs from same repo.
+    Easy to share code within repo.
+
+4. compile the angular:
+    ng serve -o

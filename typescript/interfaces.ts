@@ -73,3 +73,5 @@ console.log(restusers);
 let users = restusers.filter(user => user.id > 3);
 
 console.log(users);
+
+// Decorators

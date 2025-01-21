@@ -82,4 +82,7 @@
     Note: "#" is used in Classes for private variables.
 
 4. Interfaces:
-
+5. Decorators:
+6. ES Modules:
+        Import and Export 
+        Compiling typescript to different JS versions

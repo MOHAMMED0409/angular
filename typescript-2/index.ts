@@ -3,10 +3,10 @@ type pizza = {
     price: number
 }
 
-type order ={
-    id : number
-    pizza : pizza
-    status : string
+type order = {
+    id: number
+    pizza: pizza
+    status: string
 }
 
 const menu = [
@@ -16,18 +16,18 @@ const menu = [
     { name: "Veggie", price: 5 },
 ]
 
-const cashinregister = 100;
-const nextorderid = 1;
-const orderqueue : order[]= [];
+let cashinregister: number = 100;
+let nextorderid: number = 1;
+const orderqueue: order[] = [];
 
 function addnewpizza(pizzaobj: pizza) {
     menu.push(pizzaobj);
 }
 
-function placeorder(pizzaname:string) {
+function placeorder(pizzaname: string) {
     const selectpizza = menu.find(pizzaobj => pizzaobj.name === pizzaname);
     if (!selectpizza) {
-        console.error('${pizzaname} is not on the menu');
+        console.error(`${pizzaname} is not on the menu`);
         return;
     }
     cashinregister += selectpizza.price;
@@ -38,8 +38,8 @@ function placeorder(pizzaname:string) {
 
 function completeorder(orderid: number) {
     const order = orderqueue.find(order => order.id === orderid);
-    if(!orderid){
-        console.error('${orderid} not found');
+    if (!order) {
+        console.error(`${orderid} not found`);
         return;
     }
     order.status = "completed";

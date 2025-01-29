@@ -1,0 +1,7 @@
+commands to intialize typescript env
+    npm init -y
+    npm install typescript
+    npx tsc --init
+
+To compile typescript to javascript
+    tsc

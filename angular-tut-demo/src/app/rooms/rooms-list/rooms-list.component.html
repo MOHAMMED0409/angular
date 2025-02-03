@@ -1,0 +1,31 @@
+Rooms List
+<!-- {{roomslist}} -->
+<table class="table">
+  <tr>
+    <th>Index</th>
+    <th>Even/Odd</th>
+    <th>Room Number</th>
+    <th>Room Type</th>
+    <th>Amenities</th>
+    <th>Price</th>
+    <!-- <th>Photo</th> -->
+    <th>Check-In</th>
+    <th>Check-Out</th>
+    <th>Rating</th>
+  </tr>
+  <tr
+    [ngClass]="e ? 'even' : 'odd'"
+    *ngFor="let rooms of rooms; let e = even; let o = odd; let i = index"
+  >
+    <td>{{ i }}</td>
+    <td>{{ e ? "Even" : "Odd" }}</td>
+    <td>{{ rooms.roomnumber }}</td>
+    <td>{{ rooms.roomType }}</td>
+    <td>{{ rooms.amenities | titlecase }}</td>
+    <td>{{ rooms.price | currency : "INR" }}</td>
+    <!-- <td><img src="{{rooms.photo}}" alt="Room Photo"></td> -->
+    <td>{{ rooms.checkIn | date }}</td>
+    <td>{{ rooms.checkOut | date }}</td>
+    <td>{{ rooms.rating | number : "1.0-1" }}</td>
+  </tr>
+</table>

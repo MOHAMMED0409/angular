@@ -12,3 +12,6 @@
 
 4. compile the angular:
     ng serve -o
+
+5. To create new Components:
+    ng g c <component-name>

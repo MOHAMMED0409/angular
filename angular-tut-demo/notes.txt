@@ -1,0 +1,72 @@
+1. Binding Syntax
+    a. Interpolation
+        eg: In ts file
+            hotelName = 'Hilton';
+            In html file
+            <h1>Welcome to {{hotelName}}</h1>
+    b. Property Binding
+        eg: In ts file
+            numberOfRooms = 10;
+            In html file
+            <div [innerText]="numberOfRooms"></div>
+            we use a property in html to bind the data from the ts file.
+    c. Event Binding
+        eg: In ts file
+            hiddenroom = false;
+            toggle(){
+                this.hiddenroom = !this.hiddenroom;
+            }
+            In html file
+            <div [hidden]="hiddenroom">
+            Number of Rooms:
+            <div [innerText]="numberOfRooms"></div>
+            </div>
+            <button (click)="toggle()">toggle</button>
+    
+2. Directives
+    a. Introduction
+        It is used to change the behavior and appearance of DOM elements.
+        It can implement all lifecycle hooks.
+        It can not have templates.
+    b. Types of Directives
+        i. Structural Directives
+            *ngIf
+            *ngFor
+            *ngSwitch
+            note: Optional Chaining and null collision
+        ii. Attribute Directives
+            ngClass
+            ngStyle
+    c. Build-in Directives
+
+3. Pipes
+    The pipes are used for data Transformation.
+    Pipes doesn't change actual object.
+    Build-in Pipes:
+        1. DataPipe
+        2. UppercasePipe
+        3. LowercasePipe
+        4. CurrencyPipe
+        5. DecimalPipe
+        6. PercentPipe
+        7. JsonPipe
+        8. SlicePipe
+        9. AsyncPipe
+
+4. Lifecycle hooks
+    Change detection triggers these methods.
+    They execute depending on the conditions of the current cycle.
+    Types:
+        ngOnChanges
+        ngOnInit
+        ngDoCheck
+        ngAfterContentInit
+        ngAfterContentChecked
+        ngAfterViewedInit
+        ngAfterViewedChecked
+        ngOnDestory
+
+5. Component Interaction
+    1. @Input and @Output
+    2. @ViewChild and @ContentChild
+    3. Using Services

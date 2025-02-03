@@ -1,0 +1,13 @@
+<h1>Welcome to {{hotelName}}</h1>
+<div [hidden]="hiddenroom">
+Number of Rooms:
+<div [ngStyle]="{'color':rooms.availablerooms > 0 ? 'steelblue' : 'red'}" 
+[innerText]="numberOfRooms"></div>
+</div>
+
+{{rooms?.availablerooms ?? "No rooms available"}}
+
+<div *ngIf="rooms.availablerooms > 0">
+    <app-rooms-list [rooms]="roomslist"></app-rooms-list>
+</div>
+<button (click)="toggle()">toggle</button>

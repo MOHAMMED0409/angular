@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, DoCheck, OnInit, ViewChild} from '@angular/core';
+import { AfterViewInit, Component, DoCheck, OnDestroy, OnInit, ViewChild} from '@angular/core';
 import { Rooms,RoomList} from './rooms';
 import { CommonModule } from '@angular/common';
 import { RoomsListComponent } from "./rooms-list/rooms-list.component";
@@ -30,6 +30,7 @@ export class RoomsComponent implements OnInit, DoCheck, AfterViewInit {
   @ViewChild(HeaderComponent)
   headercomponent!: HeaderComponent;
   constructor(){}
+ 
   ngAfterViewInit(): void {
     this.headercomponent.title = "Rooms View"
   }

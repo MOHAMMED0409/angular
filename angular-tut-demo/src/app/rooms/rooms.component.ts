@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { RoomsListComponent } from "./rooms-list/rooms-list.component";
 import { title } from 'node:process';
 import { HeaderComponent } from "../header/header.component";
+import { RoomsService } from './services/rooms.service';
 
 @Component({
   selector: 'app-rooms',
@@ -29,7 +30,7 @@ export class RoomsComponent implements OnInit, DoCheck, AfterViewInit {
 
   @ViewChild(HeaderComponent)
   headercomponent!: HeaderComponent;
-  constructor(){}
+  constructor(private roomsService:RoomsService){}
  
   ngAfterViewInit(): void {
     this.headercomponent.title = "Rooms View"
@@ -44,37 +45,8 @@ export class RoomsComponent implements OnInit, DoCheck, AfterViewInit {
     this.title = 'Rooms List';
   }
   ngOnInit():void{
-    //  console.log(this.headercomponent);
-    this.roomslist = [
-    {
-    roomnumber: 101,
-    roomType: 'Single',
-    amenities: 'AC, TV, Wifi',
-    price: 1000,
-    photo: 'single.jpg',
-    checkIn: new Date('2020-01-01'),
-    checkOut: new Date('2020-01-05'),
-    rating: 4.5
-  },{
-    roomnumber: 102,
-    roomType: 'Double',
-    amenities: 'AC, TV, Wifi',
-    price: 2000,
-    photo: 'double.jpg',
-    checkIn: new Date('2020-01-01'),
-    checkOut: new Date('2020-01-05'),
-    rating : 3.5
-  },{
-    roomnumber: 103,
-    roomType: 'Suite',
-    amenities: 'AC, TV, Wifi, Mini Bar',
-    price: 3000,
-    photo: 'suite.jpg',
-    checkIn: new Date('2020-01-01'),
-    checkOut: new Date('2020-01-05'),
-    rating : 4.0
-  }
-  ]
+    this.roomslist = this.roomsService.getrooms();
+    // console.log(this.roomslist);
 }
   selectroom(room: RoomList){
     this.selectedRoom = room;

@@ -1,9 +1,8 @@
-import { ApplicationConfig, provideZoneChangeDetection } from '@angular/core';
-import { provideRouter } from '@angular/router';
+import { InjectionToken } from '@angular/core';
 
-import { routes } from './app.routes';
-import { provideClientHydration, withEventReplay } from '@angular/platform-browser';
+export interface AppConfig {
+  apiUrl: string;
+  featureFlag: boolean;
+}
 
-export const appConfig: ApplicationConfig = {
-  providers: [provideZoneChangeDetection({ eventCoalescing: true }), provideRouter(routes), provideClientHydration(withEventReplay())]
-};
+export const APP_CONFIG = new InjectionToken<AppConfig>('app.config');

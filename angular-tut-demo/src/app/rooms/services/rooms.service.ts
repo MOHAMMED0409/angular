@@ -1,11 +1,18 @@
 import { Inject, Injectable } from '@angular/core';
 import { RoomList } from '../rooms';
-import { APP_SERVICE_CONFIG } from '../../AppConfig/appconfig.service';
-import { AppConfig } from '../../AppConfig/appconfig.interface';
+import { HttpClient } from '@angular/common/http';
+import { InjectionToken } from '@angular/core';
+import { APP_SERVICE_CONFIG, AppConfig} from '../../app.config.server';
 
 @Injectable({
   providedIn: 'root'
 })
+export interface AppConfig {
+  apiEndpoint: string;
+  featureFlag: boolean;
+}
+
+export const APP_SERVICE_CONFIG = new InjectionToken<AppConfig>('app.service.config');
 export class RoomsService {
     roomslist:RoomList[] = [
     {
@@ -37,13 +44,13 @@ export class RoomsService {
     rating : 4.0
   }
   ]
-  // constructor(@Inject(APP_SERVICE_CONFIG) private config: AppConfig ) {
-  //   console.log(this.config.apiEndpoint);
-  //   console.log('Rooms Services Initialized...');
-  // }
-  constructor(){
+  constructor(@Inject(APP_SERVICE_CONFIG) private config:AppConfig ,private http: HttpClient ) {
+    console.log(this.config.apiEndpoint);
     console.log('Rooms Services Initialized...');
   }
+  // constructor(){
+  //   console.log('Rooms Services Initialized...');
+  // }
   getrooms(){
     return this.roomslist;
   }

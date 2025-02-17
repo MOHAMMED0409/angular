@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { RoomList } from '../rooms';
-import { APP_SERVICE_CONFIG } from '../../AppConfig/appconfig.service';
-import { AppConfig } from '../../AppConfig/appconfig.interface';
+
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +10,6 @@ export interface AppConfig {
   featureFlag: boolean;
 }
 
-export const APP_SERVICE_CONFIG = new InjectionToken<AppConfig>('app.service.config');
 export class RoomsService {
     roomslist:RoomList[] = [
     {

@@ -1,5 +1,5 @@
 import { InjectionToken } from '@angular/core';
-// import config from '../app/app.config.server';
+import {config} from '../app/app.config.server';
 
 export interface AppServiceConfig {
   apiUrl: string;
@@ -7,3 +7,5 @@ export interface AppServiceConfig {
 }
 
 export const APP_SERVICE_CONFIG = new InjectionToken<AppServiceConfig>('app.service.config');
+
+

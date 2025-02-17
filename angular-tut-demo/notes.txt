@@ -92,3 +92,13 @@
     <!-- More <tr> elements... -->
   </tbody>
 </table>
+
+Dependency Injection
+    This are service or object are required to perform some Operations.
+    It is design pattern.
+    Angular has a dependency injection in-built.
+
+    different Types of providers
+        Class Based providers
+        Value providers
+        Factory

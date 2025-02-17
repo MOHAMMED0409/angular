@@ -5,7 +5,7 @@ import { RoomList } from '../rooms';
   providedIn: 'root'
 })
 export class RoomsService {
-    roomslist:RoomList[] = [
+ roomslist : RoomList [] = [
     {
     roomnumber: 101,
     roomType: 'Single',
@@ -36,7 +36,7 @@ export class RoomsService {
   }
   ]
   constructor() { }
-  getrooms(){
+  getRooms(){
     return this.roomslist;
   }
 }

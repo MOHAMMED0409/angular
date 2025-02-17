@@ -10,6 +10,6 @@ const appServiceConfig: AppServiceConfig = {
 bootstrapApplication(AppComponent, {
   providers: [
     provideHttpClient(),
-    { provide: APP_SERVICE_CONFIG, useValue: appServiceConfig } 
+    { provide: APP_SERVICE_CONFIG, useValue: appServiceConfig }  // ✅ Providing service config globally
   ]
 }).catch(err => console.error(err));

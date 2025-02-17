@@ -1,8 +1,8 @@
-import { InjectionToken } from '@angular/core';
+// import { InjectionToken } from '@angular/core';
 
-export interface AppServiceConfig {
-  apiUrl: string;
-  enableLogging: boolean;
-}
+// export interface AppServiceConfig {
+//   apiUrl: string;
+//   enableLogging: boolean;
+// }
 
-export const APP_SERVICE_CONFIG = new InjectionToken<AppServiceConfig>('app.service.config');
+// export const APP_SERVICE_CONFIG = new InjectionToken<AppServiceConfig>('app.service.config');

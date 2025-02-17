@@ -1,6 +1,5 @@
 import { InjectionToken } from '@angular/core';
-import {config} from '../app/app.config.server';
-
+// import {config} from '../app/app.config.server';
 export interface AppServiceConfig {
   apiUrl: string;
   enableLogging: boolean;

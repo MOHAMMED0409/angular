@@ -2,7 +2,7 @@ import { Inject, Injectable } from '@angular/core';
 import { RoomList } from '../rooms';
 import { HttpClient } from '@angular/common/http';
 import { InjectionToken } from '@angular/core';
-import { APP_SERVICE_CONFIG, AppConfig} from '../../app.config.server';
+import { APP_SERVICE_CONFIG, AppConfig} from '../../app.config';
 
 @Injectable({
   providedIn: 'root'

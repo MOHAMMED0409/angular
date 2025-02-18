@@ -35,7 +35,9 @@ export class RoomsService {
     rating : 4.0
   }
   ]
-  constructor() { }
+  constructor() {
+    console.log('Rooms Service Initialization...');
+   }
   getRooms(){
     return this.roomslist;
   }

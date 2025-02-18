@@ -5,11 +5,12 @@ import { RoomsListComponent } from "./rooms-list/rooms-list.component";
 import { title } from 'node:process';
 import { HeaderComponent } from "../header/header.component";
 import { RoomsService } from './services/rooms.service';
+import { EmployeeComponent } from "../employee/employee.component";
 
 @Component({
   selector: 'app-rooms',
   standalone: true,
-  imports: [CommonModule, RoomsListComponent, HeaderComponent],
+  imports: [CommonModule, RoomsListComponent, HeaderComponent, EmployeeComponent],
   templateUrl: './rooms.component.html',
   styleUrls: ['./rooms.component.scss'] 
 })
@@ -43,7 +44,6 @@ export class RoomsComponent implements OnInit, DoCheck, AfterViewInit {
   toggle(){
     this.hiddenroom = !this.hiddenroom;
     this.title = 'Rooms List';
-  
   }
   ngOnInit():void{
     //  console.log(this.headercomponent);
